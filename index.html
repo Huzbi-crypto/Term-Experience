@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Huzbi Project | Exclusive Terminal Experience!">
+  <meta name="keywords" content="huzbi, HuzbiNaru, termExp, HTML, CSS, terminal, huzbi_naru">
+  <meta name="author" content="Huzbi Naru">
+  <meta http-equiv="refresh" content="250">
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+  <link href="main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/39565093f3.js""></script>
+    <script>function close_window() {
+        if (confirm(" Close Window?")) { close(); }
+      } </script>
+       <script 
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <title>Huzbi Project | Terminal Experience</title>
+</head>
+
+<body style="font-family: 'Ubuntu Mono', 'Ubuntu', sans-serif;" class="overflow-y-scroll bg-cover lazy text-[1.1rem]">
+  <div class="m-2 relative" onclick="document.getElementById('texter').focus();">
+    <div
+      class="ring-1 ring-purple-500 bg-[#081d2dd8] border-[#7AE0CA] border hover:backdrop-blur-sm rounded-[2px] shadow-xl shadow-[#1d1e1fb4] min-h-[98vh] resize overflow-hidden ">
+
+      <header>
+        <p class="p-2 text-center text-slate-400">
+          <a href="https://github.com/Huzbi-crypto/" target="blank"><i
+              class="fa-brands fa-github pb-1 text-xl float-left text-slate-500 hover:text-pink-800"></i>Huzbi@naruhina</a>
+          <a href="javascript:close_window();"><i
+              class="fa-solid fa-circle-xmark text-xl justify-end text-slate-500 hover:text-red-500 items-end  float-right"></i></a>
+        </p>
+        <hr class="border-[#7AE0CA]">
+      </header>
+      <div class="p-4">
+        <div class="flex flex-col md:flex-row">
+          <pre
+            class="ascii pt-2 pb-5 prose lg:prose-xl text-[#8de2d0ac] whitespace-pre-wrap inline-block break-words leading-none" style="font-family: monospace,-webkit-pictograph;">
+██╗  ██╗██╗   ██╗███████╗██████╗ ██╗        
+██║  ██║██║   ██║╚══███╔╝██╔══██╗██║        
+███████║██║   ██║  ███╔╝ ██████╔╝██║        
+██╔══██║██║   ██║ ███╔╝  ██╔══██╗██║        
+██║  ██║╚██████╔╝███████╗██████╔╝██║        
+╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═════╝ ╚═╝        
+            </pre>
+          <div class="pl-2 float-right" ; style="font-family: 'Ubuntu Mono', 'Ubuntu', sans-serif;">
+            <div class="text-[#7AE0CA] md:text-[16px] text-[15px]"><i
+                class="fa-solid fa-address-card pr-[0.9rem]"></i>Huzbi Naru
+              <pre class="text-[#8DE2D0]">-------------------</pre>
+
+            </div>
+
+            <a href="#">
+              <a href="https://github.com/Huzbi-crypto" target="blank">
+                <div class="text-[#7AE0CA] text-[15.3px]"><i
+                    class="fa-brands fa-github pr-[0.7rem] justify-items-start"></i>Github<a
+                    href="https://github.com/Huzbi-crypto" target="blank" class="text-[14.8px] p-1 ">→
+                    &nbsp;github/Huzbi-crypto</a></div>
+              <a href="https://twitter.com/HuzbiC" target="blank">
+                <div class="text-[#7AE0CA] text-[15.3px]"><i
+                    class="fa-brands fa-twitter pr-[0.7rem] justify-items-start"></i>Twitter<a
+                    href="https://twitter.com/HuzbiC" target="blank" class="text-[14.8px] p-1">→
+                    &nbsp;twitter/HuzbiC</a></div>
+              <a href="https://discordapp.com/users/653883645546856448" target="blank">
+                <div class="text-[#7AE0CA] text-[15.3px]"><i
+                    class="fa-brands fa-discord pr-[0.9rem] justify-items-start"></i>Discord<a
+                    href="https://discordapp.com/users/653883645546856448" target="blank"
+                    class="text-[14.8px] p-1">→ &nbsp;discord.com/huzbi</a></div>
+              <a href="https://www.instagram.com/Huzbinaru/" target="blank">
+                <div class="text-[#7AE0CA] text-[15.3px]"><i
+                    class="fa-brands fa-instagram pr-[0.9rem] justify-items-start"></i>Instagram<a
+                    href="https://www.instagram.com/Huzbinaru/" target="blank" class="text-[14.8px] p-1">→
+                    &nbsp;instagram/Huzbinaru</a></div>
+          </div>
+        </div>
+        <div id="terminal">
+          <a id="before"></a>
+        </div>
+        <div id="command" onclick="$('texter').focus();">
+          <input type="text" id="texter" class="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)" onkeypress="typeIt(this, event);"></input>
+          <div id="liner">
+            <span id="typer"></span><b class="cursor" id="cursor">█</b><div class="list"></div>
+      
+          </div>
+        </div>
+        <footer class="md:pt-[26%] pt-[100%]">
+        </footer>
+           <script>
+    // Function to check if the specific key combination is pressed
+    function checkKeyCombination(event) {
+      // Check if "Ctrl", "Alt", and "F8" keys are pressed
+      if (event.ctrlKey && event.altKey && event.key === "F8") {
+        // Redirect to the desired page
+        window.location.href = "https://huzbi-creativecoding.vercel.app/constellation-effect/constelation-effect.html"; // Replace with the URL of the page you want to load
+      }
+    }
+
+    // Event listener to detect key press
+    document.addEventListener("keydown", checkKeyCombination);
+  </script>                                      
+        <script src="./js/caret.js"></script>
+        <script src="./js/commands.js"></script>
+        <script src="./js/main.js"></script>
+                               
+        
+</body>
+
+</html>
