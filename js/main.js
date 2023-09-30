@@ -139,6 +139,10 @@ function commander(cmd) {
     case "ls":
       addLine("I ain't showin' my files!", "color2", 0);
       break;
+    case "art":
+      addLine("Opening Art Gallery...", "color2", 0);
+      newTab(art);
+      break;
     default:
       addLine(
         '<span class="inherit">Command not found. For a list of commands, type <span class="command">\'help\'</span>.</span>',

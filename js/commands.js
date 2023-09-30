@@ -6,6 +6,7 @@ var github = "https://github.com/Huzbi-crypto";
 var sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
 var email = "mailto:huzbi@protonmail.com";
 var hentai = "https://www.youtube.com/watch?v=Jrg9KxGNeJY";
+var art = "https://huzbi-artgallery.vercel.app/";
 
 aboutme = [
   "<br>",
