@@ -1,12 +1,12 @@
-var mal = "https://myanimelist.net/profile/Huzbi";
-var twitter = "https://twitter.com/HuzbiC";
-var discord = "https://discordapp.com/users/653883645546856448";
-var instagram = "https://www.instagram.com/Huzbinaru/";
-var github = "https://github.com/Huzbi-crypto";
-var sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-var email = "mailto:huzbi@protonmail.com";
-var hentai = "https://www.youtube.com/watch?v=Jrg9KxGNeJY";
-var art = "https://huzbi-artgallery.vercel.app/";
+const mal = "https://myanimelist.net/profile/Huzbi";
+const twitter = "https://twitter.com/HuzbiC";
+const discord = "https://discordapp.com/users/653883645546856448";
+const instagram = "https://www.instagram.com/Huzbinaru/";
+const github = "https://github.com/Huzbi-crypto";
+const sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+const email = "mailto:huzbi@protonmail.com";
+const hentai = "https://www.youtube.com/watch?v=Jrg9KxGNeJY";
+const art = "https://huzbi-artgallery.vercel.app/";
 
 aboutme = [
   "<br>",
@@ -26,55 +26,47 @@ aboutme = [
    *Try using a social command.`,
   `<li><pre class="whitespace-pre-wrap">👨‍💻 Check out my github profile to view other stuff I've created.
    *Use the github command to take a look at my GitHub profile.`,
-  `<li>📫 Contact me at <a href= "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=huzbi@protonmail.com">huzbi@protonmail.com</a>`,
+  `<li>📫 Contact me at <a href= "${email}">huzbi@protonmail.com</a>`,
   "<br>",
 ];
+
+function createSocialLink(name, url) {
+  return `${name} <a href="${url}" target="blank">${url}</a>`;
+}
 
 social = [
   "<br>",
-  'mal        <a href="' +
-    mal +
-    '" target="blank">myanimelist.com/Huzbi' +
-    "</a>",
-  'twitter        <a href="' +
-    twitter +
-    '" target="blank">twitter.com/HuzbiC' +
-    "</a>",
-  'discord       <a href="' +
-    discord +
-    '" target="blank">discord.com/huzbi' +
-    "</a>",
-  'instagram      <a href="' +
-    instagram +
-    '" target="blank">instagram/Huzbinaru' +
-    "</a>",
-  'github         <a href="' +
-    github +
-    '" target="blank">github/Huzbi-crypto' +
-    "</a>",
-  
+  createSocialLink("Mal", mal),
+  createSocialLink("Twitter", twitter),
+  createSocialLink("Discord", discord),
+  createSocialLink("Instagram", instagram),
+  createSocialLink("GitHub", github),
   "<br>",
 ];
 
-help = [
-  `<br><pre class="whitespace-pre-wrap">
-  <span class="command">aboutme</span>    
-   <span class="command">↳</span>&nbsp;Diplays Who I am?
-  <span class="command">social</span>     
-   <span class="command">↳</span>&nbsp;Lists social networks.
-  <span class="command">email</span>      
-   <span class="command">↳</span>&nbsp;To send me an email.
-  <span class="command">history</span>    
-   <span class="command">↳</span>&nbsp;View command history.
-  <span class="command">help</span>       
-   <span class="command">↳</span>&nbsp;Displays this help msg.
-  <span class="command">sudo</span>       
-   <span class="command">↳</span>&nbsp;Try it out for yourself.
-  <span class="command">clear</span>
-   <span class="command">↳</span>&nbsp;Clear terminal.
-  <span class="command">weeb</span>
-   <span class="command">↳</span>&nbsp;Find weeb commands. 😉</pre><br>`,
-];
+const commands_desc = {
+  aboutme: 'Displays Who I am?',
+  social: 'Lists social networks.',
+  email: 'To send me an email.',
+  history: 'View command history.',
+  sudo: 'Try it out for yourself.',
+  clear: 'Clear terminal.',
+  weeb: 'Find weeb commands. 😉',
+};
+function createHelpText(commands) {
+  let helpText = '<br><pre class="whitespace-pre-wrap">';
+
+  for (const command in commands) {
+    helpText += `<span class="command">${command}</span>     
+    <span class="command">↳</span>&nbsp;${commands_desc[command]}\n`;
+  }
+
+  helpText += "</pre><br>";
+
+  return [helpText];
+}
+help = createHelpText(commands_desc);
+
 banner = [
   `<div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to Exclusive Terminal Experience! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div>`,
 ];

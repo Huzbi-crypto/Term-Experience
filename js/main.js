@@ -1,12 +1,12 @@
-var before = document.getElementById("before");
-var liner = document.getElementById("liner");
-var command = document.getElementById("typer");
-var textarea = document.getElementById("texter");
-var terminal = document.getElementById("terminal");
+let before = document.getElementById("before");
+let liner = document.getElementById("liner");
+let command = document.getElementById("typer");
+let textarea = document.getElementById("texter");
+let terminal = document.getElementById("terminal");
 
-var git = 0;
-var pw = false;
-var commands = [];
+let git = 0;
+let pw = false;
+let commands = [];
 
 setTimeout(function () {
   loopLines(banner, "", 80);
@@ -53,103 +53,75 @@ function enterKey(e) {
     }
   }
 
-
-function commander(cmd) {
-  switch (cmd.toLowerCase()) {
-    case "help":
-      loopLines(help, "color2 margin", 80);
-      break;
-      
-    case "aboutme":
-      loopLines(aboutme, "color2 margin", 80);
-      break;
-
-    case "social":
-      loopLines(social, "color2 margin", 80);
-      break;
-
-    case "history":
+  const commandFunctions = {
+    help: () => loopLines(help, "color2 margin", 80),
+    aboutme: () => loopLines(aboutme, "color2 margin", 80),
+    social: () => loopLines(social, "color2 margin", 80),
+    history: () => {
       addLine("<br>", "", 0);
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
-      break;
-      
-    case "email":
-      addLine(
-        'Opening mailto:<a href="mailto:huzbi@protonmail.com"> huzbi@protonmail.com</a>...',
-        "color2",
-        80
-      );
+    },
+    email: () => {
+      addLine(`Opening mailto:<a href="${email}"> huzbi@protonmail.com</a>...`, "color2", 80);
       newTab(email);
-      break;
-      newTab(email);
-      break;
-      
-    case "clear":
+    },
+    clear: () => {
       setTimeout(function () {
-        terminal.innerHTML =
-          '<a id="before"><div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div></a>';
+        terminal.innerHTML = 
+        '<a id="before"><div class="pt-2"><span class="text-[#7d82d7db] ">Welcome to my portfolio! — Type <span class="command text-[#75e1e7]">help</span> for a list of supported commands.</span></div></a>';
         before = document.getElementById("before");
       }, 1);
-      break;
-      
-    case "banner":
-      loopLines(banner, "", 80);
-      break;
-      
-    // socials
-    case "mal":
-      addLine("Opening MyAnimeList...", "color2", 80);
-      newTab(mal);
-      break;
-    case "twitter":
-      addLine("Opening Twitter...", "color2", 0);
-      newTab(twitter);
-      break;
-    case "discord":
-      addLine("Opening Discord...", "color2", 0);
-      newTab(Discord);
-      break;
-    case "instagram":
-      addLine("Opening Instagram...", "color2", 0);
-      newTab(instagram);
-      break;
-    case "github":
-      addLine("Opening GitHub...", "color2", 0);
-      newTab(github);
-      break;
-    case "sudo":
-      addLine("Li'l boy, you ain't an admin 😤...", "color2", 0);
-      newTab(sudo);
-      break;
-    // weeb commands
-    case "weeb":
+    },
+    weeb: () => {
       addLine("Opening Weeb Commands...", "color2", 0);
       addLine("If you're a true weeb, you'll find those commands! (work in progress)", "color2", 0);
-      break;
-    case "hentai":
+    },
+    banner: () => {
+      loopLines(banner, "", 80);
+    },
+    sudo: () => {
+      addLine("Li'l boy, you ain't an admin 😤...", "color2", 0);
+      newTab(sudo);
+    },
+    // socials
+    mal: () => {
+      addLine("Opening MyAnimeList...", "color2", 80);
+      newTab(mal);
+    },
+    twitter: () => {
+      addLine("Opening Twitter...", "color2", 0);
+      newTab(twitter);
+    },
+    discord: () => {
+      addLine("Opening Discord...", "color2", 0);
+      newTab(Discord);
+    },
+    instagram: () => {
+      addLine("Opening Instagram...", "color2", 0);
+      newTab(instagram);
+    },
+    github: () => {
+      addLine("Opening GitHub...", "color2", 0);
+      newTab(github);
+    },
+    // weeb commands
+    hentai: () => {
       addLine("Opening Hentai 😏 Command...", "color2", 0);
       newTab(hentai);
-      break;
+    }
+  };
+function commander(cmd) {
+  const commandFunc = commandFunctions[cmd.toLowerCase()];
 
-    // misc commands
-    case "pwd":
-      addLine("home/huzbi/", "color2", 0);
-      break;
-    case "ls":
-      addLine("I ain't showin' my files!", "color2", 0);
-      break;
-    case "art":
-      addLine("Opening Art Gallery...", "color2", 0);
-      newTab(art);
-      break;
-    default:
-      addLine(
-        '<span class="inherit">Command not found. For a list of commands, type <span class="command">\'help\'</span>.</span>',
-        "error",
-        100
-      );
-      break;
+  if (commandFunc) {
+    commandFunc();
+  } else {
+    addLine(
+      '<span class="inherit">Command not found. For a list of commands, type <span class="command">\'help\'</span>.</span>',
+      "error",
+      100
+    );
   }
 }
 
