@@ -109,6 +109,19 @@ function enterKey(e) {
     hentai: () => {
       addLine("Opening Hentai 😏 Command...", "color2", 0);
       newTab(hentai);
+    },
+    // educational vloggers
+    education: () => {
+      addLine("Opening Education Command...", "color2", 0);
+      newTab(education);
+    },
+    // pwd command
+    pwd: () => {
+      addLine("home/huzbi", "color2", 0);
+    },
+    // ls command
+    ls: () => {
+      addLine("I ain't showing you my files!", "color2", 0);
     }
   };
 function commander(cmd) {
