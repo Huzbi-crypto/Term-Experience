@@ -127,6 +127,11 @@ function enterKey(e) {
     // ls command
     ls: () => {
       addLine("I ain't showing you my files!", "color2", 0);
+    },
+    // movie site command
+    movie: () => {
+      addLine("Opening HuzStream+...", "color2", 0);
+      newTab(movie);
     }
   };
 function commander(cmd) {
