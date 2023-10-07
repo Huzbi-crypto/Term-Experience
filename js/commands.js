@@ -3,6 +3,7 @@ const twitter = "https://twitter.com/HuzbiC";
 const discord = "https://discordapp.com/users/653883645546856448";
 const instagram = "https://www.instagram.com/Huzbinaru/";
 const github = "https://github.com/Huzbi-crypto";
+const huzbi = "https://huzbi.vercel.app/";
 const sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
 const email = "mailto:huzbi@protonmail.com";
 const hentai = "https://www.youtube.com/watch?v=Jrg9KxGNeJY";

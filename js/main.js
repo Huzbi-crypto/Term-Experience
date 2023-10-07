@@ -105,6 +105,11 @@ function enterKey(e) {
       addLine("Opening GitHub...", "color2", 0);
       newTab(github);
     },
+    // huzbi's profile
+    huzbi: () => {
+      addLine("Opening Huzbi's Profile...", "color2", 0);
+      newTab(huzbi);
+    },
     // weeb commands
     hentai: () => {
       addLine("Opening Hentai 😏 Command...", "color2", 0);
