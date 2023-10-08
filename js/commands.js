@@ -11,6 +11,7 @@ const art = "https://huzbi-artgallery.vercel.app/";
 const education = "https://huzbi-education.obinode.app/";
 const movie = "https://huzstream.obinode.app/";
 const code = "https://github.com/Huzbi-crypto/Term-Experience";
+const image_gen = "https://huzbi-animeartai.vercel.app/";
 
 aboutme = [
   "<br>",
