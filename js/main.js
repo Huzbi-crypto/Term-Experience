@@ -105,6 +105,11 @@ function enterKey(e) {
       addLine("Opening GitHub...", "color2", 0);
       newTab(github);
     },
+    // source code
+    code: () => {
+      addLine("Opening the source code of the site...", "color2", 0);
+      newTab(code);
+    },
     // huzbi's profile
     huzbi: () => {
       addLine("Opening Huzbi's Profile...", "color2", 0);
