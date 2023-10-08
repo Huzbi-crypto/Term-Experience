@@ -126,7 +126,7 @@ function enterKey(e) {
     },
     // educational vloggers
     education: () => {
-      addLine("Opening Education Command...", "color2", 0);
+      addLine("Opening Educational Vloggers 😏 Site...", "color2", 0);
       newTab(education);
     },
     // pwd command
