@@ -128,6 +128,10 @@ function enterKey(e) {
       addLine("Opening Modern Art Gallery of UncleRumble...", "color2", 0);
       newTab(art);
     },
+    artp: () => {
+      addLine("Opening Art Gallery with 3-D Perspective Scrolling...", "color2", 0);
+      newTab(artp);
+    },
     // educational vloggers
     education: () => {
       addLine("Opening Educational Vloggers 😏 Site...", "color2", 0);

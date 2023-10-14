@@ -8,6 +8,7 @@ const sudo = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
 const email = "mailto:huzbi@protonmail.com";
 const hentai = "https://www.youtube.com/watch?v=Jrg9KxGNeJY";
 const art = "https://huzbi-artgallery.vercel.app/";
+const artp = "https://huzbi-artperspective.vercel.app/";
 const education = "https://huzbi-education.obinode.app/";
 const movie = "https://huzstream.obinode.app/";
 const code = "https://github.com/Huzbi-crypto/Term-Experience";
