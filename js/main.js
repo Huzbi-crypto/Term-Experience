@@ -110,6 +110,10 @@ function enterKey(e) {
       addLine("Opening the source code of the site...", "color2", 0);
       newTab(code);
     },
+    img_grab: () => {
+      addLine("Opening Repo for Image Grabber Extension...", "color2", 0);
+      newTab(img_grab);
+    },
     // huzbi's profile
     huzbi: () => {
       addLine("Opening Huzbi's Profile...", "color2", 0);

@@ -13,6 +13,7 @@ const education = "https://huzbi-education.obinode.app/";
 const movie = "https://huzstream.obinode.app/";
 const code = "https://github.com/Huzbi-crypto/Term-Experience";
 const image_gen = "https://huzbi-animeartai.vercel.app/";
+const img_grab = "https://github.com/Huzbi-crypto/Huzbi-ImgGrabber";
 
 aboutme = [
   "<br>",
