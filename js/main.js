@@ -55,7 +55,7 @@ function enterKey(e) {
 
   const commandFunctions = {
     help: () => loopLines(help, "color2 margin", 80),
-    aboutme: () => loopLines(aboutme, "color2 margin", 80),
+    whoami: () => loopLines(whoami, "color2 margin", 80),
     social: () => loopLines(social, "color2 margin", 80),
     history: () => {
       addLine("<br>", "", 0);

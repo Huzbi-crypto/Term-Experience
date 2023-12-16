@@ -15,7 +15,7 @@ const code = "https://github.com/Huzbi-crypto/Term-Experience";
 const image_gen = "https://huzbi-animeartai.vercel.app/";
 const img_grab = "https://github.com/Huzbi-crypto/Huzbi-ImgGrabber";
 
-aboutme = [
+whoami = [
   "<br>",
   "<span class='underline'>Yo, it's Huzbi!👋</span>",
   "<br>",
@@ -52,7 +52,7 @@ social = [
 ];
 
 const commands_desc = {
-  aboutme: 'Displays Who I am?',
+  whoami: 'Displays Who I am?',
   social: 'Lists social networks.',
   email: 'To send me an email.',
   history: 'View command history.',
